@@ -285,7 +285,7 @@ Navbar
 .nav-logo{
     /* background: red; */
     display: flex;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .nav-header img{
@@ -303,7 +303,6 @@ Navbar
 .nav-links{
     display: flex;
     flex-direction: column;
-
     height: 0;
     overflow: hidden;
     transition: var(--transition);
@@ -336,28 +335,23 @@ Navbar
     .nav-btn {
         display: none;
     }
-
     .navbar {
         height: 6rem;   /*7rem*/
     }
-
     .nav-center {
         display: flex;
         align-items: center;
     }
-
     .nav-header {
         height: auto;
         margin-right: 2rem;
     }
-
     .nav-links{
-        height: auto;
+        height: auto !important;
         flex-direction: row;
         align-items: center;
         width: 100%;
     }
-
     .nav-link{
         padding: 0;
         border-top: none;
@@ -376,11 +370,10 @@ Page
 ===============
 */
 .page {
-    /* background: red; */
     width: 90vw;
     max-width: var(--max-width);
     margin: 0 auto;           /*will place all items in center*/
-    padding: 2rem;
+    padding-top: 2rem;
     min-height: calc(100vh - (6rem + 4rem));
 }
 
@@ -416,7 +409,7 @@ HERO
 .hero {
     height: 40vh;
     background: url(../assets/main.jpeg) center/cover no-repeat;
-    margin: 2rem -2rem;  /*-2rem*/
+    margin: 2rem 0;
     border-radius: var(--borderRadius);
     position: relative;
 }
@@ -458,18 +451,17 @@ Recipes
 }
 
 .tags-container {
-  /* border: 2px solid blue; */
   order: 1;
   display: flex;
   flex-direction: column;
   padding-bottom: 3rem;
+  /* border: 2px solid blue; */
 }
 
 .recipes-list{
   display: grid;
   gap: 2rem 1rem;
   padding-bottom: 3rem;
-  /* border: 2px solid green; */
 }
 
 .tags-container h4{
@@ -505,6 +497,7 @@ Recipes
 
 .recipe h5{
   margin-bottom: 0;
+  margin-top: 0.25rem;
   line-height: 1;
   color: var(--grey-700);
 }
@@ -529,6 +522,7 @@ Recipes
 @media screen and (min-width:992px) {
   .recipes-container {
     grid-template-columns: 200px 1fr;
+    gap: 1rem;
   }
   .recipe p{
     font-size: 0.85rem;
@@ -549,7 +543,6 @@ Recipes
     font-size: 1.15rem;
   }
 }
-
 
 /*
 =============== 
